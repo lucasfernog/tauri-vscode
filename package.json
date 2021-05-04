@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/tauri-apps/tauri-vscode.git"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -22,6 +22,8 @@
   "activationEvents": [
     "workspaceContains:**/tauri.conf.json",
     "onCommand:tauri.init",
+    "onCommand:tauri.deps-install",
+    "onCommand:tauri.deps-update",
     "onCommand:tauri.dev",
     "onCommand:tauri.build",
     "onCommand:tauri.build-debug"
@@ -38,6 +40,16 @@
       {
         "command": "tauri.init",
         "title": "Init",
+        "category": "Tauri"
+      },
+      {
+        "command": "tauri.deps-install",
+        "title": "Install Missing Dependencies",
+        "category": "Tauri"
+      },
+      {
+        "command": "tauri.deps-update",
+        "title": "Update Dependencies",
         "category": "Tauri"
       },
       {
@@ -70,8 +82,8 @@
     "@types/mocha": "8.2.2",
     "@types/node": "13.13.51",
     "@types/vscode": "1.55.0",
-    "@typescript-eslint/eslint-plugin": "4.22.0",
-    "@typescript-eslint/parser": "4.22.0",
+    "@typescript-eslint/eslint-plugin": "4.22.1",
+    "@typescript-eslint/parser": "4.22.1",
     "eslint": "7.25.0",
     "mocha": "8.3.2",
     "typescript": "4.2.4",
